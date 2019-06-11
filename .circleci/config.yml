@@ -19,6 +19,7 @@ jobs:
           name: launch todoserver.py
           command: |
             pipenv run python todoserver.py
+          background: true
 
       - run: 
           name: run test_server.py
