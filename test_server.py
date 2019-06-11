@@ -2,26 +2,6 @@ import requests
 import pytest
 import json
 import todoserver
-"""
-   date-fullyear   = 4DIGIT
-   date-month      = 2DIGIT  ; 01-12
-   date-mday       = 2DIGIT  ; 01-28, 01-29, 01-30, 01-31 based on
-                             ; month/year
-   time-hour       = 2DIGIT  ; 00-23
-   time-minute     = 2DIGIT  ; 00-59
-   time-second     = 2DIGIT  ; 00-58, 00-59, 00-60 based on leap second
-                             ; rules
-   time-secfrac    = "." 1*DIGIT
-   time-numoffset  = ("+" / "-") time-hour ":" time-minute
-   time-offset     = "Z" / time-numoffset
-
-   partial-time    = time-hour ":" time-minute ":" time-second
-                     [time-secfrac]
-   full-date       = date-fullyear "-" date-month "-" date-mday
-   full-time       = partial-time time-offset
-
-   date-time       = full-date "T" full-time
-"""
 
 """
     Register an event:
@@ -37,10 +17,7 @@ import todoserver
     
     Retrieve events:
     curl -X GET http://localhost:8080/api/v1/event
-    
-    - empty list 
-
-    curl -X GET http://localhost:8080/api/v1/event/2
+    curl -X GET http://localhost:8080/api/v1/event/1
     -
 """
 
@@ -122,7 +99,8 @@ def test_main():
     get_all_test()
     get_event_by_index()
 
-if __name__ == "__main__":
+# for use when run using python test_server.py
+if __name__ == "__main__":  
     # get_all_test()
     post_valid_data_test()
     get_event_by_index()
