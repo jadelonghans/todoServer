@@ -44,7 +44,7 @@ GET /api/v1/event
     ...
 ]}
 ```
-
+最初のレコードがインデックス１で取得できる。
 ```
 # イベント1件取得 API request
 GET /api/v1/event/${id}
