@@ -13,3 +13,26 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
+
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.7.3
+    steps:
+      - checkout
+      - run: 
+          name: install dependencies
+          command: |  # use pipenv to install dependencies
+            sudo pip install pipenv
+            pipenv install requests
+            pipenv install pytest
+          
+      - run:
+          name: launch todoServer.py
+          command: |
+            pipenv run python todoServer.py
+
+      - run: 
+          name: run test_server.py
+          command: |
+            pytest
