@@ -6,7 +6,8 @@ A simple HTTP server in python3 to maintain a To Do List using GET and POST
 使用言語：　python３
 
 ## 概要：
-python3のHTTPServerを用いた簡単なTODO管理サービス用のhTTPサーバー 
+python3のHTTPServerを用いた簡単なTODO管理サービス用のhTTPサーバーである。
+
 TODO イベントを POST で登録，GET で取得できる HTTP サーバを作成する．
 データのやり取りはJSONで行う。
 TODOイベントのデータはサーバーの実行中のみメインメモリ上に保存される。
