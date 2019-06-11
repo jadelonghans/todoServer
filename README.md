@@ -9,11 +9,11 @@ A simple HTTP server in python3 to maintain a To Do List using GET and POST
 python3のHTTPServerを用いた簡単なTODO管理サービス用のhTTPサーバー 
 TODO イベントを POST で登録，GET で取得できる HTTP サーバを作成する．
 データのやり取りはJSONで行う。
-TODOイベントはサーバーの実行中のみメインメモリ上に保存される。
+TODOイベントのデータはサーバーの実行中のみメインメモリ上に保存される。
 
 ## 構成：
 todoserver.py: HTTPSサーバーのソースファイル
-test_server.py: テストを記述したソースファイル
+test_server.py: GET,POSTのテストを記述したソースファイル
 
 ## 仕様：
 
@@ -55,4 +55,4 @@ GET /api/v1/event/${id}
 404 Not Found
 ```
 
-日付は RFC3339 形式の文字列．RFC3339 の仕様は https://tools.ietf.org/html/rfc3339#section-5.6 に従う。
+日付は RFC3339 形式の文字列．RFC3339 の仕様は https://tools.ietf.org/html/rfc3339#section-5.6 ご参照ください。
