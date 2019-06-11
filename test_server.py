@@ -107,7 +107,7 @@ def get_all_test():
 
 def get_event_by_index():
     r = requests.get(url + "/1")
-    assert int(r.status_code) == 100 # changed temp
+    assert int(r.status_code) == 200 
 
     data = r.json()
     print (data)
